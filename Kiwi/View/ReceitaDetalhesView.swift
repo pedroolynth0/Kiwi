@@ -1,10 +1,3 @@
-//
-//  ReceitaDetalhesView.swift
-//  Kiwi
-//
-//  Created by dti digital on 31/08/23.
-//
-
 import SwiftUI
 
 struct ReceitaDetalhesView: View {
@@ -12,44 +5,56 @@ struct ReceitaDetalhesView: View {
     
     var body: some View {
         
-        ScrollView(){
-            ResizedImage(imageName: receita.imagem, maxHeight: 300)
-            HStack {
-                VStack {
-
-                    Text("Ingredientes")
-                        .font(.body)
+        ScrollView{
+            
+            VStack(alignment: .center, spacing: 20) {
+                GeometryReader{
+                    geometry in
+                    Image(receita.imagem)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geometry.size.width,height: geometry.size.height)
+                        .ignoresSafeArea()
+                        .clipped()
+                }
+                .frame(height: 250)
+                
+                VStack(alignment: .leading,spacing: 20) {
+                    //MARK: Titulo
+                    HStack {
+                        VStack (alignment: .leading){
+                            Text(receita.nome)
+                              .font(.largeTitle)
+                              .fontWeight(.heavy)
+                              .foregroundColor(.red)
+                            
+                            Text("By Pedro Olyntho")
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                        }
+                        Spacer()
+                        Image(systemName: "star.fill")
+                            .foregroundColor(Color.yellow)
+                    }//: Titulo
+                    
+                    Text("Descrição")
+                        .font(.title3)
                         .fontWeight(.bold)
                     
-                    ForEach(receita.ingredientes, id: \.self) { ingrediente in
-                        Text(ingrediente)
-                    }
                 }
-                .edgesIgnoringSafeArea(.vertical)
-                Spacer()
-            }
+                .padding(.horizontal)
             
-        }
+            }
+            .ignoresSafeArea()
+        }.edgesIgnoringSafeArea(.top)
+        
     }
+    
+    
 }
 
-struct ResizedImage: View {
-    var imageName: String
-    var maxHeight: CGFloat
-    
-    var body: some View {
-        Image(imageName)
-            .resizable()
-            .scaledToFill()
-            
-            .frame(maxHeight: maxHeight)
-            .clipped()
-            
-            
-    }
-}
 struct ReceitaDetalhesView_Previews: PreviewProvider {
     static var previews: some View {
-        ReceitaDetalhesView(receita: ReceitaData().receitas[0])
+        ReceitaDetalhesView(receita: ReceitaData().receitas[1])
     }
 }
