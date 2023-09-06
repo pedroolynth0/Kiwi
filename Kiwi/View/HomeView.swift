@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State var Teste = ""
-    let receitaData = ReceitaData().receitas
+    let recipeData = RecipeData().recipes
     var body: some View {
         NavigationStack{
             VStack{
@@ -22,9 +22,9 @@ struct HomeView: View {
                 ScrollView(.horizontal,showsIndicators: false){
                     
                     HStack {
-                        ForEach(receitaData , id: \.uniqueID){ receita in
-                            NavigationLink(destination: ReceitaDetalhesView(receita: receita)) {
-                                CardReceita(receita: receita)
+                        ForEach(recipeData , id: \.uniqueID){ receita in
+                            NavigationLink(destination: RecipeDetailsView(recipe: receita)) {
+                                CardRecipe(recipe: receita)
                                     .padding(EdgeInsets(top: 40, leading: 10, bottom: 40, trailing: 10))
                                     .frame(width: 300)
                             }

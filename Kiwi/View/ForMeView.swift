@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ForMeView: View {
-    let receitaData = ReceitaData().receitas
+    let recipeData = RecipeData().recipes
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading,spacing: 20){
@@ -129,9 +129,9 @@ struct ForMeView: View {
                 ScrollView(.horizontal,showsIndicators: false){
                     //Navigation Stack
                     HStack {
-                        ForEach(receitaData , id: \.uniqueID){ receita in
-                            NavigationLink(destination: ReceitaDetalhesView(receita: receita)) {
-                                CardReceitaView(receita: receita)
+                        ForEach(recipeData , id: \.uniqueID){ recipe in
+                            NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
+                                CardRecipeView(recipe: recipe)
                                     .frame(width: 150,height: 250)
                             }
                             

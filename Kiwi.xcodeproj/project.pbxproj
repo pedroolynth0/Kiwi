@@ -16,13 +16,13 @@
 		B71560562A9EA9B200164130 /* KiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71560552A9EA9B200164130 /* KiwiUITestsLaunchTests.swift */; };
 		B71560662A9EAAA000164130 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71560652A9EAAA000164130 /* HomeView.swift */; };
 		B715606A2A9EACBF00164130 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71560692A9EACBF00164130 /* NavigationTab.swift */; };
-		B715606E2A9EADB000164130 /* AddReceitaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B715606D2A9EADB000164130 /* AddReceitaView.swift */; };
-		B71560712A9EB21B00164130 /* CardReceita.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71560702A9EB21B00164130 /* CardReceita.swift */; };
+		B715606E2A9EADB000164130 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B715606D2A9EADB000164130 /* AddRecipeView.swift */; };
+		B71560712A9EB21B00164130 /* CardRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71560702A9EB21B00164130 /* CardRecipe.swift */; };
 		B76B7DEF2AA7A9FD00E152C1 /* ForMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B7DEE2AA7A9FD00E152C1 /* ForMeView.swift */; };
-		B76B7DF12AA7B6C400E152C1 /* CardReceitaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B7DF02AA7B6C400E152C1 /* CardReceitaView.swift */; };
-		B7A6DFAA2A9FEEDD002E0227 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DFA92A9FEEDD002E0227 /* Receita.swift */; };
-		B7A6DFAC2A9FF011002E0227 /* ReceitaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DFAB2A9FF011002E0227 /* ReceitaData.swift */; };
-		B7A6DFB12AA100D8002E0227 /* ReceitaDetalhesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DFB02AA100D8002E0227 /* ReceitaDetalhesView.swift */; };
+		B76B7DF12AA7B6C400E152C1 /* CardRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B7DF02AA7B6C400E152C1 /* CardRecipeView.swift */; };
+		B7A6DFAA2A9FEEDD002E0227 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DFA92A9FEEDD002E0227 /* Recipe.swift */; };
+		B7A6DFAC2A9FF011002E0227 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DFAB2A9FF011002E0227 /* RecipeData.swift */; };
+		B7A6DFB12AA100D8002E0227 /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DFB02AA100D8002E0227 /* RecipeDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +55,13 @@
 		B71560552A9EA9B200164130 /* KiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B71560652A9EAAA000164130 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B71560692A9EACBF00164130 /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
-		B715606D2A9EADB000164130 /* AddReceitaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceitaView.swift; sourceTree = "<group>"; };
-		B71560702A9EB21B00164130 /* CardReceita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReceita.swift; sourceTree = "<group>"; };
+		B715606D2A9EADB000164130 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		B71560702A9EB21B00164130 /* CardRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecipe.swift; sourceTree = "<group>"; };
 		B76B7DEE2AA7A9FD00E152C1 /* ForMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForMeView.swift; sourceTree = "<group>"; };
-		B76B7DF02AA7B6C400E152C1 /* CardReceitaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReceitaView.swift; sourceTree = "<group>"; };
-		B7A6DFA92A9FEEDD002E0227 /* Receita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
-		B7A6DFAB2A9FF011002E0227 /* ReceitaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaData.swift; sourceTree = "<group>"; };
-		B7A6DFB02AA100D8002E0227 /* ReceitaDetalhesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaDetalhesView.swift; sourceTree = "<group>"; };
+		B76B7DF02AA7B6C400E152C1 /* CardRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecipeView.swift; sourceTree = "<group>"; };
+		B7A6DFA92A9FEEDD002E0227 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		B7A6DFAB2A9FF011002E0227 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		B7A6DFB02AA100D8002E0227 /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				B71560652A9EAAA000164130 /* HomeView.swift */,
-				B715606D2A9EADB000164130 /* AddReceitaView.swift */,
-				B7A6DFB02AA100D8002E0227 /* ReceitaDetalhesView.swift */,
+				B715606D2A9EADB000164130 /* AddRecipeView.swift */,
+				B7A6DFB02AA100D8002E0227 /* RecipeDetailsView.swift */,
 				B76B7DEE2AA7A9FD00E152C1 /* ForMeView.swift */,
 			);
 			path = View;
@@ -171,8 +171,8 @@
 		B71560642A9EAA7A00164130 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B7A6DFA92A9FEEDD002E0227 /* Receita.swift */,
-				B7A6DFAB2A9FF011002E0227 /* ReceitaData.swift */,
+				B7A6DFA92A9FEEDD002E0227 /* Recipe.swift */,
+				B7A6DFAB2A9FF011002E0227 /* RecipeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,8 +180,8 @@
 		B715606F2A9EB1C100164130 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B71560702A9EB21B00164130 /* CardReceita.swift */,
-				B76B7DF02AA7B6C400E152C1 /* CardReceitaView.swift */,
+				B71560702A9EB21B00164130 /* CardRecipe.swift */,
+				B76B7DF02AA7B6C400E152C1 /* CardRecipeView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -325,13 +325,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71560662A9EAAA000164130 /* HomeView.swift in Sources */,
-				B71560712A9EB21B00164130 /* CardReceita.swift in Sources */,
-				B7A6DFAA2A9FEEDD002E0227 /* Receita.swift in Sources */,
-				B76B7DF12AA7B6C400E152C1 /* CardReceitaView.swift in Sources */,
-				B7A6DFAC2A9FF011002E0227 /* ReceitaData.swift in Sources */,
+				B71560712A9EB21B00164130 /* CardRecipe.swift in Sources */,
+				B7A6DFAA2A9FEEDD002E0227 /* Recipe.swift in Sources */,
+				B76B7DF12AA7B6C400E152C1 /* CardRecipeView.swift in Sources */,
+				B7A6DFAC2A9FF011002E0227 /* RecipeData.swift in Sources */,
 				B71560402A9EA9B100164130 /* Kiwi.xcdatamodeld in Sources */,
-				B715606E2A9EADB000164130 /* AddReceitaView.swift in Sources */,
-				B7A6DFB12AA100D8002E0227 /* ReceitaDetalhesView.swift in Sources */,
+				B715606E2A9EADB000164130 /* AddRecipeView.swift in Sources */,
+				B7A6DFB12AA100D8002E0227 /* RecipeDetailsView.swift in Sources */,
 				B715606A2A9EACBF00164130 /* NavigationTab.swift in Sources */,
 				B76B7DEF2AA7A9FD00E152C1 /* ForMeView.swift in Sources */,
 				B71560342A9EA9AF00164130 /* KiwiApp.swift in Sources */,

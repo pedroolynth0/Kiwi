@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct AddReceitaView: View {
+struct AddRecipeView: View {
     
-    @State var Teste = ""
-    let receitaData = ReceitaData().receitas
+    @State var Test = ""
+    let recipeData = RecipeData().recipes
     var body: some View {
         
         VStack{
-            TextField("Pesquisar", text: $Teste)
+            TextField("Pesquisar", text: $Test)
                 .padding(16.0)
                 .background(Color(UIColor.systemGray6))
                 .cornerRadius(20)
@@ -22,8 +22,8 @@ struct AddReceitaView: View {
             ScrollView(.horizontal,showsIndicators: false){
                 
                 HStack {
-                    ForEach(receitaData , id: \.uniqueID){ receita in
-                        CardReceita(receita: receita)
+                    ForEach(recipeData , id: \.uniqueID){ receita in
+                        CardRecipe(recipe: receita)
                             .padding(EdgeInsets(top: 40, leading: 10, bottom: 40, trailing: 10))
                             .frame(width: 300)
                     }
@@ -36,6 +36,6 @@ struct AddReceitaView: View {
 }
 struct AddReceitaView_Previews: PreviewProvider {
     static var previews: some View {
-        AddReceitaView()
+        AddRecipeView()
     }
 }
