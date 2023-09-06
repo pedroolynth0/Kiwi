@@ -5,10 +5,10 @@ struct ReceitaDetalhesView: View {
     
     var body: some View {
         
-        ScrollView{
+        ScrollView {
             
             VStack(alignment: .center, spacing: 20) {
-                GeometryReader{
+                GeometryReader {
                     geometry in
                     Image(receita.imagem)
                         .resizable()
@@ -17,12 +17,12 @@ struct ReceitaDetalhesView: View {
                         .ignoresSafeArea()
                         .clipped()
                 }
-                .frame(height: 250)
+                .frame(height: 260)
                 
-                VStack(alignment: .leading,spacing: 20) {
+                VStack(alignment: .leading,spacing: 10) {
                     //MARK: Titulo
                     HStack {
-                        VStack (alignment: .leading){
+                        VStack (alignment: .leading) {
                             Text(receita.nome)
                               .font(.largeTitle)
                               .fontWeight(.heavy)
@@ -37,10 +37,49 @@ struct ReceitaDetalhesView: View {
                             .foregroundColor(Color.yellow)
                     }//: Titulo
                     
+                    HStack(spacing: 20){
+                        HStack(){
+                            Image(systemName: "clock")
+                            Text(receita.tempo)
+                        }
+                        HStack{
+                            Image(systemName: "trophy")
+                            Text(receita.dificuldade)
+                        }
+                    }
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
+                    
+                    
                     Text("Descrição")
                         .font(.title3)
                         .fontWeight(.bold)
+                        .padding(.vertical, 5.0)
                     
+                    Text(receita.descricao)
+                        .font(.callout)
+                        .foregroundColor(Color.gray)
+                    Text("Ingredientes")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 5.0)
+                    
+                        ForEach(receita.ingredientes, id: \.self){ ingrediente in
+                            Text("- " + ingrediente)
+                                .font(.callout)
+                                .foregroundColor(.gray)
+                        }
+                    Text("Instruções")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 5.0)
+                    
+                    ForEach(0 ..< receita.etapas.count, id: \.self){ contador in
+                        
+                        Text("\(contador + 1). \(receita.etapas[contador])")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                    }
                 }
                 .padding(.horizontal)
             

@@ -12,15 +12,15 @@ struct NavigationTab: View {
 
     var body: some View {
         TabView{
+                ForMeView()
+                    .tabItem{
+                            Image(systemName: "smiley.fill")
+                                .frame(width: 10,height: 10)
+                            Text("For me")
+                    }
                 HomeView()
                     .tabItem{
-                            Image(systemName: "house")
-                                .frame(width: 10,height: 10)
-                            Text("Home")
-                    }
-                AddReceitaView()
-                    .tabItem{
-                        Label("Teste", systemImage: "square")
+                        Label("Pesquisar", systemImage: "magnifyingglass")
                     }
             
         }
