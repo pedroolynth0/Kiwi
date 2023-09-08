@@ -10,25 +10,27 @@ struct ForMeView: View {
                     Text("For Me")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                    
-                    HStack(){
-                        categoryButton(label: "Café da manhã", systemImage: "mug.fill")
+                    VStack(alignment: .center){
                         
-                        categoryButton(label: "Almoço", systemImage: "fork.knife")
-                    }
-                    HStack(){
-                        categoryButton(label: "Jantar", systemImage: "carrot.fill")
-                        
-                        categoryButton(label: "Lanche", systemImage: "takeoutbag.and.cup.and.straw.fill")
-                    }
-                    
+                        HStack(){
+                            categoryButton(label: "Café da manhã", systemImage: "mug.fill")
+                            
+                            categoryButton(label: "Almoço", systemImage: "fork.knife")
+                        }
+                        HStack(){
+                            categoryButton(label: "Jantar", systemImage: "carrot.fill")
+                            
+                            categoryButton(label: "Lanche", systemImage: "takeoutbag.and.cup.and.straw.fill")
+                        }
+                    }.padding()
                     Divider()
                     
                     // Chamando a função foodGrid com a categoria desejada
-                    foodGrid(label: "Comidas Saudáveis")
-                    Divider()
                     foodGrid(label: "Fast-Food")
-                    
+                    Divider()
+                    foodGrid(label: "Massa")
+                    Divider()
+                    foodGrid(label: "Pizza")
                 }
                 .padding()
                 Spacer()
@@ -82,8 +84,10 @@ extension ForMeView{
             ScrollView(.horizontal, showsIndicators: false){
                 HStack {
                     ForEach(recipeData, id: \.uniqueID){ recipe in
-                        NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
-                            CardRecipeView(recipe: recipe)
+                        if (recipe.category == label){
+                            NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
+                                CardRecipeView(recipe: recipe)
+                            }
                         }
                     }
                 }

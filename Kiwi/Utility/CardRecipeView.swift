@@ -5,16 +5,13 @@ struct CardRecipeView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            GeometryReader { geometry in
-                Image(recipe.image)
+            Image(recipe.image)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 200, height: 200)
                     .cornerRadius(10.0)
-            }
-            .frame(maxWidth: 200, maxHeight: 200)
-            .clipped()
-
+                    .frame(maxWidth: 200, maxHeight: 200)
+                    .clipped()
             VStack(alignment: .leading) {
                 Text(recipe.category)
                     .font(.caption)
