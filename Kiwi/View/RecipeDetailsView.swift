@@ -43,7 +43,7 @@ struct RecipeDetailsView: View {
                             Text(recipe.time)
                         }
                         HStack{
-                            Image(systemName: "trophy")
+                            Image(systemName: "chart.bar")
                             Text(recipe.difficulty)
                         }
                     }

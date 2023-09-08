@@ -1,43 +1,48 @@
-//
-//  CardReceita.swift
-//  Kiwi
-//
-//  Created by dti digital on 29/08/23.
-//
-
 import SwiftUI
 
 struct CardRecipeView: View {
-    var recipe : Recipe
-    var body: some View {
+    var recipe: Recipe
 
-        VStack(alignment: .leading){
-            GeometryReader{ geometry in
+    var body: some View {
+        VStack(alignment: .leading) {
+            GeometryReader { geometry in
                 Image(recipe.image)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                .cornerRadius(20.0)
-                
+                    .frame(width: 200, height: 200)
+                    .cornerRadius(10.0)
             }
-            Text(recipe.category)
-                .font(.caption)
-                .foregroundColor(.blue)
-                .fontWeight(.bold)
-            Text(recipe.name)
-                .font(.headline)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.leading)
-                .foregroundColor(.black
-                )
+            .frame(maxWidth: 200, maxHeight: 200)
+            .clipped()
+
+            VStack(alignment: .leading) {
+                Text(recipe.category)
+                    .font(.caption)
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
+                    
+                HStack{
+                    Text(recipe.name)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
+                        
+                    Spacer()
+                }
+
+            }
+            .padding(.leading, 10.0)
+            .frame(maxWidth: 200, maxHeight: 70)
         }
+        .frame(width: 200, height: 275)
+        .background(Color(UIColor.systemGray6))
+        .cornerRadius(10)
     }
-        
 }
 
 struct CardReceitaView_Previews: PreviewProvider {
     static var previews: some View {
-        
         CardRecipeView(recipe: RecipeData().recipes[0])
     }
 }
