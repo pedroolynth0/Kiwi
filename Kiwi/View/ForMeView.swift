@@ -40,10 +40,7 @@ struct ForMeView: View {
 }
 extension ForMeView{
     private func categoryButton(label: String, systemImage: String) -> some View {
-        Button(action: {
-            // Ação a ser executada quando o botão for pressionado
-            print("Botão pressionado!")
-        }) {
+        NavigationLink(destination: CategoryView(category: label)) {
             HStack {
                 Image(systemName: systemImage)
                     .foregroundColor(.blue)
@@ -70,10 +67,7 @@ extension ForMeView{
                     .font(.title3)
                     .fontWeight(.bold)
                 Spacer()
-                Button(action: {
-                    // Ação a ser executada quando o botão for pressionado
-                    print("Botão pressionado!")
-                }) {
+                NavigationLink(destination: CategoryView(category: label)){
                     Text("Ver mais")
                         .font(.caption)
                         .padding(5)

@@ -18,8 +18,9 @@ struct Recipe{
     var ingredients: [String]
     var difficulty: String
     var time: String
+    var meal: String
     
-    init(name: String, category: String,description: String, image: String, steps: [String], ingredients: [String], difficulty: String, time: String) {
+    init(name: String, category: String,description: String, image: String, steps: [String], ingredients: [String], difficulty: String, time: String, meal: String) {
         self.name = name
         self.category = category
         self.description = description
@@ -28,6 +29,7 @@ struct Recipe{
         self.ingredients = ingredients
         self.difficulty = difficulty
         self.time = time
+        self.meal = meal
     }
     var uniqueID: String {
         return UUID().uuidString

@@ -8,9 +8,8 @@ struct CardRecipeView: View {
             Image(recipe.image)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 200, height: 200)
-                    .cornerRadius(10.0)
                     .frame(maxWidth: 200, maxHeight: 200)
+                    .cornerRadius(10.0)
                     .clipped()
             VStack(alignment: .leading) {
                 Text(recipe.category)
