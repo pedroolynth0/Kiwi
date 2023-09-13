@@ -11,17 +11,16 @@ import SwiftUI
 struct AddRecipeView4: View {
     @State private var image: Image? = nil
     @State private var isImagePickerPresented: Bool = false
-    
+    @EnvironmentObject var recipeViewModel: RecipeViewModel
     var body: some View {
         VStack (spacing: 0){
+            
             Text("Adicionar Imagem")
                 .font(.largeTitle)
                 .bold()
                 .padding()
             if image != nil {
-                image!
-                    .resizable()
-                    .scaledToFill()
+                HorizontalRecipeView(recipe: recipeViewModel.recipe)
                    
             }
             Spacer()
@@ -39,7 +38,9 @@ struct AddRecipeView4: View {
     }
     
     func loadImage() {
-       
+        if let selectedImage = image {
+            recipeViewModel.recipe.image = selectedImage
+        }
     }
 }
 
@@ -80,5 +81,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 struct AddRecipeView4_Previews: PreviewProvider {
     static var previews: some View {
         AddRecipeView4()
+            .environmentObject(RecipeViewModel())
     }
 }

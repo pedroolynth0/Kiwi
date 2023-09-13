@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct NavigationTab: View {
-
     var body: some View {
+        
         TabView{
                 ForMeView()
                     .tabItem{
@@ -19,12 +19,13 @@ struct NavigationTab: View {
                             Text("For me")
                     }
                 AddRecipeView()
+                .environmentObject(RecipeViewModel())
                     .tabItem{
                         Label("Adicionar Receita", systemImage: "plus")
                     }
             
         }
-        .accentColor(.blue)
+                .accentColor(.blue)
     }
 }
 

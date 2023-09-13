@@ -27,6 +27,7 @@
 		B7F711AF2AB0E6630029E2B1 /* AddRecipeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F711AE2AB0E6630029E2B1 /* AddRecipeView2.swift */; };
 		B7F711B12AB10CDF0029E2B1 /* AddRecipeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F711B02AB10CDF0029E2B1 /* AddRecipeView3.swift */; };
 		B7F711B32AB112B40029E2B1 /* AddRecipeView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F711B22AB112B40029E2B1 /* AddRecipeView4.swift */; };
+		B7F711B72AB239C50029E2B1 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F711B62AB239C50029E2B1 /* RecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B7F711AE2AB0E6630029E2B1 /* AddRecipeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView2.swift; sourceTree = "<group>"; };
 		B7F711B02AB10CDF0029E2B1 /* AddRecipeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView3.swift; sourceTree = "<group>"; };
 		B7F711B22AB112B40029E2B1 /* AddRecipeView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView4.swift; sourceTree = "<group>"; };
+		B7F711B62AB239C50029E2B1 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				B7A6DFA92A9FEEDD002E0227 /* Recipe.swift */,
 				B7A6DFAB2A9FF011002E0227 /* RecipeData.swift */,
+				B7F711B62AB239C50029E2B1 /* RecipeViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				B7A6DFAA2A9FEEDD002E0227 /* Recipe.swift in Sources */,
 				B76B7DF12AA7B6C400E152C1 /* CardRecipeView.swift in Sources */,
 				B7A6DFAC2A9FF011002E0227 /* RecipeData.swift in Sources */,
+				B7F711B72AB239C50029E2B1 /* RecipeViewModel.swift in Sources */,
 				B7F711B32AB112B40029E2B1 /* AddRecipeView4.swift in Sources */,
 				B7F711AC2AAF7DC50029E2B1 /* CategoryView.swift in Sources */,
 				B71560402A9EA9B100164130 /* Kiwi.xcdatamodeld in Sources */,

@@ -13,6 +13,8 @@ struct KiwiApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationTab()
+                
+
         }
     }
 }

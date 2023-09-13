@@ -1,19 +1,12 @@
 import SwiftUI
 
 struct AddRecipeView: View {
+    @StateObject var recipeViewModel = RecipeViewModel()
     
     let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
-    @State var name = ""
-    @State var category = ""
-    @State var description = ""
-    @State var image = ""
-    @State var steps = [""]
-    @State var ingredients = [""]
-    @State var difficulty = ""
-    @State var time = ""
-    @State var meal = ""
     
     let recipeData = RecipeData().recipes
+    @State var selectedTime = Date()
     
     @State private var dynamicDescriptionHeight: CGFloat = 100
     
@@ -29,7 +22,7 @@ struct AddRecipeView: View {
                     VStack(alignment: .leading){
                         Text("Nome:")
                             .padding([.top, .leading, .trailing])
-                        TextField("Ex: Pedro", text: $name)
+                        TextField("Ex: Carne...", text: $recipeViewModel.recipe.name)
                             .padding(16.0)
                             .background(Color(UIColor.systemGray6))
                             .cornerRadius(10)
@@ -37,7 +30,7 @@ struct AddRecipeView: View {
                     VStack(alignment: .leading){
                         Text("Descrição:")
                             .padding([.top, .leading, .trailing])
-                        TextEditor(text: $description)
+                        TextEditor(text: $recipeViewModel.recipe.description)
                             .frame(minHeight: dynamicDescriptionHeight, maxHeight: dynamicDescriptionHeight)
                             .padding(16.0)
                             .background(Color(UIColor.systemGray6))
@@ -45,19 +38,23 @@ struct AddRecipeView: View {
                             .scrollContentBackground(.hidden)
                             .onAppear {
                                 // Calcula a altura inicial do campo de texto de descrição
-                                dynamicDescriptionHeight = getHeightForText(description)
+                                dynamicDescriptionHeight = getHeightForText(recipeViewModel.recipe.description)
                             }
-                            .onChange(of: description) { newValue in
+                            .onChange(of: recipeViewModel.recipe.description) { newValue in
                                 // Atualiza a altura do campo de texto de descrição conforme o usuário digita
                                 dynamicDescriptionHeight = getHeightForText(newValue)
                             }
+                        DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                            .labelsHidden() // Para ocultar o rótulo do DatePicker
+                            .datePickerStyle(.wheel) 
+                            .environment(\.locale, Locale(identifier: "en_GB"))
 
 
                     }
                     VStack(alignment: .leading){
                         Text("Categoria:")
                             .padding([.top, .leading, .trailing])
-                        customPicker(selection: $category, options: categoryOptions)
+                        customPicker(selection: $recipeViewModel.recipe.category, options: categoryOptions)
                             .frame(maxWidth: .infinity)
                             .padding(16.0)
                             .background(Color(UIColor.systemGray6))
@@ -76,12 +73,15 @@ struct AddRecipeView: View {
                                     .background(Color(UIColor.systemGray6))
                                     .cornerRadius(10)
                             }
-                        }.padding()
+                        }
+                        
+                        .padding()
                     }
                 }.padding()
         }
-
+           
         }
+        .environmentObject(recipeViewModel)
     }
     
 
@@ -107,11 +107,11 @@ extension AddRecipeView {
     }
     
     private func addStep() {
-        steps.append("")
+        recipeViewModel.recipe.steps.append("")
     }
 
     private func deleteStep(at offsets: IndexSet) {
-        steps.remove(atOffsets: offsets)
+        recipeViewModel.recipe.steps.remove(atOffsets: offsets)
     }
 }
 

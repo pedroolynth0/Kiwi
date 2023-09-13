@@ -38,6 +38,8 @@ struct ForMeView: View {
         }
     }
 }
+
+
 extension ForMeView{
     private func categoryButton(label: String, systemImage: String) -> some View {
         NavigationLink(destination: CategoryView(category: label)) {

@@ -10,7 +10,7 @@ struct RecipeDetailsView: View {
             VStack(alignment: .center, spacing: 20) {
                 GeometryReader {
                     geometry in
-                    Image(recipe.image)
+                    recipe.image?
                         .resizable()
                         .scaledToFill()
                         .frame(width: geometry.size.width,height: geometry.size.height)

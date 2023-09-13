@@ -11,7 +11,7 @@ struct HorizontalRecipeView: View {
     var recipe: Recipe
     var body: some View {
         HStack{
-            imageSettings(imageName: recipe.image)
+            imageSettings(imageName: recipe.image ?? Image(systemName: "book.closed.fill"))
             VStack(alignment: .leading,spacing: 5) {
                 Text(recipe.name)
                     .fontWeight(.bold)
@@ -52,8 +52,8 @@ extension HorizontalRecipeView{
         .foregroundColor(Color(UIColor.systemGray))
     }
     
-    private func imageSettings(imageName: String) -> some View{
-        Image(imageName)
+    private func imageSettings(imageName: Image) -> some View{
+            imageName
             .resizable()
             .scaledToFill()
             .frame(maxWidth: 100, maxHeight: 100)

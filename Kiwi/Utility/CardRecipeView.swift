@@ -5,7 +5,7 @@ struct CardRecipeView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Image(recipe.image)
+                recipe.image?
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: 200, maxHeight: 200)

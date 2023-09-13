@@ -5,7 +5,8 @@
 //  Created by dti digital on 30/08/23.
 //
 
-import Foundation
+
+import SwiftUI
 
 
 struct Recipe{
@@ -13,14 +14,14 @@ struct Recipe{
     var name: String
     var category: String
     var description: String
-    var image: String
+    var image: Image?
     var steps: [String]
     var ingredients: [String]
     var difficulty: String
     var time: String
     var meal: String
     
-    init(name: String, category: String,description: String, image: String, steps: [String], ingredients: [String], difficulty: String, time: String, meal: String) {
+    init(name: String, category: String,description: String, image: Image, steps: [String], ingredients: [String], difficulty: String, time: String, meal: String) {
         self.name = name
         self.category = category
         self.description = description

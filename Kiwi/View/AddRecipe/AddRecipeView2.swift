@@ -1,22 +1,14 @@
 import SwiftUI
 
 struct AddRecipeView2: View {
-    
+    @EnvironmentObject var recipeViewModel: RecipeViewModel
     let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
-    @State var name = ""
-    @State var category = ""
-    @State var description = ""
-    @State var image = ""
-    @State var steps = [""]
-    @State var ingredients = [""]
-    @State var difficulty = ""
-    @State var time = ""
-    @State var meal = ""
     
     let recipeData = RecipeData().recipes
     
     @State private var dynamicDescriptionHeight: CGFloat = 100
     
+
     var body: some View {
         
         NavigationStack {
@@ -28,8 +20,8 @@ struct AddRecipeView2: View {
                     VStack(alignment: .leading) {
 
                         List {
-                            ForEach(0..<steps.count, id: \.self) { index in
-                                TextField("Etapa \(index + 1)", text: $steps[index])
+                            ForEach(0..<recipeViewModel.recipe.steps.count, id: \.self) { index in
+                                TextField("Etapa \(index + 1)", text: $recipeViewModel.recipe.steps[index])
                                     .padding(16.0)
                                     .background(Color(UIColor.systemGray6))
                                     .cornerRadius(10)
@@ -37,7 +29,7 @@ struct AddRecipeView2: View {
                             }
                             .onDelete(perform: deleteStep)
                         }
-                        .frame(height: max(CGFloat(80 * steps.count), 200))
+                        .frame(height: max(CGFloat(80 * recipeViewModel.recipe.steps.count), 200))
                     .scrollContentBackground(.hidden)
                     }
 
@@ -62,6 +54,7 @@ struct AddRecipeView2: View {
                 }.padding()
             }
         }
+        .environmentObject(RecipeViewModel())
     }
     
 
@@ -87,16 +80,17 @@ extension AddRecipeView2 {
     }
     
     private func addStep() {
-        steps.append("")
+        recipeViewModel.recipe.steps.append("")
     }
 
     private func deleteStep(at offsets: IndexSet) {
-        steps.remove(atOffsets: offsets)
+        recipeViewModel.recipe.steps.remove(atOffsets: offsets)
     }
 }
 
 struct AddReceitaView2_Previews: PreviewProvider {
     static var previews: some View {
         AddRecipeView2()
+            .environmentObject(RecipeViewModel())
     }
 }
