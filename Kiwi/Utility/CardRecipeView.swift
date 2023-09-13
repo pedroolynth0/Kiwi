@@ -23,6 +23,7 @@ struct CardRecipeView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                         .multilineTextAlignment(.leading)
+                        .padding(.bottom, 10.0)
                         
                     Spacer()
                 }

@@ -18,9 +18,9 @@ struct NavigationTab: View {
                                 .frame(width: 10,height: 10)
                             Text("For me")
                     }
-                HomeView()
+                AddRecipeView()
                     .tabItem{
-                        Label("Pesquisar", systemImage: "magnifyingglass")
+                        Label("Adicionar Receita", systemImage: "plus")
                     }
             
         }
