@@ -12,46 +12,49 @@ struct AddRecipeView3: View {
     var body: some View {
         
         NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 20){
-                    Text("Ingredientes")
-                        .font(.largeTitle)
-                        .bold()
-                    VStack(alignment: .leading) {
+            VStack {
+                Text("Ingredientes")
+                    .font(.largeTitle)
+                    .bold()
+                ScrollView {
+                    LazyVStack(spacing: 20){
 
-                        List {
-                            ForEach(0..<recipeViewModel.recipe.ingredients.count, id: \.self) { index in
-                                TextField("Ingrediente \(index + 1)", text: $recipeViewModel.recipe.ingredients[index])
-                                    .padding(16.0)
-                                    .background(Color(UIColor.systemGray6))
-                                    .cornerRadius(10)
-                                    
+                        VStack(alignment: .leading) {
+
+                            List {
+                                ForEach(0..<recipeViewModel.recipe.ingredients.count, id: \.self) { index in
+                                    TextField("Ingrediente \(index + 1)", text: $recipeViewModel.recipe.ingredients[index])
+                                        .padding(16.0)
+                                        .background(Color(UIColor.systemGray6))
+                                        .cornerRadius(10)
+                                        
+                                }
+                                .onDelete(perform: deleteStep)
                             }
-                            .onDelete(perform: deleteStep)
+                            .frame(height: max(CGFloat(80 * recipeViewModel.recipe.ingredients.count), 200))
+                        .scrollContentBackground(.hidden)
                         }
-                        .frame(height: max(CGFloat(80 * recipeViewModel.recipe.ingredients.count), 200))
-                    .scrollContentBackground(.hidden)
-                    }
 
-                    Button(action: addStep) {
-                        Label("Adicionar Ingrediente", systemImage: "plus.circle")
-                    }
-                    VStack(alignment: .leading) {
-                        NavigationLink(destination: AddRecipeView4()) {
-                            
-                            HStack {
-                                Spacer()
-                                Text("Proximo")
-                                    .padding()
-                                    .background(Color(UIColor.systemGray6))
-                                    .cornerRadius(10)
-                            }
-                        }.padding()
-                    }
+                        Button(action: addStep) {
+                            Label("Adicionar Ingrediente", systemImage: "plus.circle")
+                        }
+                        VStack(alignment: .leading) {
+                            NavigationLink(destination: AddRecipeView4()) {
+                                
+                                HStack {
+                                    Spacer()
+                                    Text("Proximo")
+                                        .padding()
+                                        .background(Color(UIColor.systemGray6))
+                                        .cornerRadius(10)
+                                }
+                            }.padding()
+                        }
 
-                    Spacer()
-                    
-                }.padding()
+                        Spacer()
+                        
+                    }.padding()
+                }
             }
         }.environmentObject(RecipeViewModel())
     }

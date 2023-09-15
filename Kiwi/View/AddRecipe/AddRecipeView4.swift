@@ -13,28 +13,42 @@ struct AddRecipeView4: View {
     @State private var isImagePickerPresented: Bool = false
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     var body: some View {
-        VStack (spacing: 0){
-            
-            Text("Adicionar Imagem")
-                .font(.largeTitle)
-                .bold()
-                .padding()
-            if image != nil {
-                HorizontalRecipeView(recipe: recipeViewModel.recipe)
-                   
-            }
-            Spacer()
-            Button(action: {
-                self.isImagePickerPresented = true
-            }) {
-                Text("Selecionar Imagem")
-            }
-            .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
-                ImagePicker(image: self.$image)
-            }
-            
-            Spacer()
-        }.padding()
+        NavigationStack {
+            VStack (spacing: 0){
+                
+                Text("Adicionar Imagem")
+                    .font(.largeTitle)
+                    .bold()
+                    .padding()
+                if recipeViewModel.recipe.image != nil {
+                    HorizontalRecipeView(recipe: recipeViewModel.recipe)
+                       
+                }
+                Spacer()
+                Button(action: {
+                    self.isImagePickerPresented = true
+                }) {
+                    Text("Selecionar Imagem")
+                }
+                .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
+                    ImagePicker(image: self.$image)
+                }
+                
+                Spacer()
+                VStack(alignment: .leading) {
+                    NavigationLink(destination: RecipeDetailsView(recipe: recipeViewModel.recipe)) {
+                        
+                        HStack {
+                            Spacer()
+                            Text("Proximo")
+                                .padding()
+                                .background(Color(UIColor.systemGray6))
+                                .cornerRadius(10)
+                        }
+                    }.padding()
+                }
+            }.padding()
+        }
     }
     
     func loadImage() {

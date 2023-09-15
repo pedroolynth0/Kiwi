@@ -12,46 +12,49 @@ struct AddRecipeView2: View {
     var body: some View {
         
         NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 20){
-                    Text("Etapas")
-                        .font(.largeTitle)
-                        .bold()
-                    VStack(alignment: .leading) {
+            VStack {
+                Text("Etapas")
+                    .font(.largeTitle)
+                    .bold()
+                ScrollView {
+                    LazyVStack(spacing: 20){
+ 
+                        VStack(alignment: .leading) {
 
-                        List {
-                            ForEach(0..<recipeViewModel.recipe.steps.count, id: \.self) { index in
-                                TextField("Etapa \(index + 1)", text: $recipeViewModel.recipe.steps[index])
-                                    .padding(16.0)
-                                    .background(Color(UIColor.systemGray6))
-                                    .cornerRadius(10)
-                                    
+                            List {
+                                ForEach(0..<recipeViewModel.recipe.steps.count, id: \.self) { index in
+                                    TextField("Etapa \(index + 1)", text: $recipeViewModel.recipe.steps[index])
+                                        .padding(16.0)
+                                        .background(Color(UIColor.systemGray6))
+                                        .cornerRadius(10)
+                                        
+                                }
+                                .onDelete(perform: deleteStep)
                             }
-                            .onDelete(perform: deleteStep)
+                            .frame(height: max(CGFloat(80 * recipeViewModel.recipe.steps.count), 200))
+                        .scrollContentBackground(.hidden)
                         }
-                        .frame(height: max(CGFloat(80 * recipeViewModel.recipe.steps.count), 200))
-                    .scrollContentBackground(.hidden)
-                    }
 
-                    Button(action: addStep) {
-                        Label("Adicionar Etapa", systemImage: "plus.circle")
-                    }
-                    VStack(alignment: .leading) {
-                        NavigationLink(destination: AddRecipeView3()) {
-                            
-                            HStack {
-                                Spacer()
-                                Text("Proximo")
-                                    .padding()
-                                    .background(Color(UIColor.systemGray6))
-                                    .cornerRadius(10)
-                            }
-                        }.padding()
-                    }
+                        Button(action: addStep) {
+                            Label("Adicionar Etapa", systemImage: "plus.circle")
+                        }
+                        VStack(alignment: .leading) {
+                            NavigationLink(destination: AddRecipeView3()) {
+                                
+                                HStack {
+                                    Spacer()
+                                    Text("Proximo")
+                                        .padding()
+                                        .background(Color(UIColor.systemGray6))
+                                        .cornerRadius(10)
+                                }
+                            }.padding()
+                        }
 
-                    Spacer()
-                    
-                }.padding()
+                        Spacer()
+                        
+                    }.padding()
+                }
             }
         }
         .environmentObject(RecipeViewModel())
