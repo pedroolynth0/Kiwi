@@ -10,12 +10,24 @@ struct RecipeDetailsView: View {
             VStack(alignment: .center, spacing: 20) {
                 GeometryReader {
                     geometry in
-                    recipe.image?
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geometry.size.width,height: geometry.size.height)
-                        .ignoresSafeArea()
-                        .clipped()
+                    if let image = recipe.image?.imageFromBase64 {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geometry.size.width,height: geometry.size.height)
+                            .ignoresSafeArea()
+                            .clipped()
+                        
+                    }
+                    else {
+                       Image(systemName: "photo.fill")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geometry.size.width,height: geometry.size.height)
+                            .ignoresSafeArea()
+                            .clipped()
+                            .foregroundColor(Color(UIColor.systemGray5))
+                   }
                 }
                 .frame(height: 260)
                 

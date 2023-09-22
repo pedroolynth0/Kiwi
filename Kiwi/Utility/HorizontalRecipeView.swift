@@ -11,7 +11,26 @@ struct HorizontalRecipeView: View {
     var recipe: Recipe
     var body: some View {
         HStack{
-            imageSettings(imageName: recipe.image ?? Image(systemName: "book.closed.fill"))
+            if let image = recipe.image?.imageFromBase64 {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .cornerRadius(10.0)
+                    .clipped()
+                    .padding(8.0)
+                
+            }
+            else {
+               Image(systemName: "photo.fill")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .cornerRadius(10.0)
+                    .clipped()
+                    .padding(8.0)
+                    .foregroundColor(Color(UIColor.systemGray5))
+           }
             VStack(alignment: .leading,spacing: 5) {
                 Text(recipe.name)
                     .fontWeight(.bold)
@@ -52,8 +71,8 @@ extension HorizontalRecipeView{
         .foregroundColor(Color(UIColor.systemGray))
     }
     
-    private func imageSettings(imageName: Image) -> some View{
-            imageName
+    private func imageSettings(imageName: String) -> some View{
+            Image(imageName)
             .resizable()
             .scaledToFill()
             .frame(maxWidth: 100, maxHeight: 100)

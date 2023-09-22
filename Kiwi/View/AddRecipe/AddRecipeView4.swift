@@ -9,57 +9,61 @@ import SwiftUI
 
 
 struct AddRecipeView4: View {
-    @State private var image: Image? = nil
+    @State private var image: UIImage? = nil
     @State private var isImagePickerPresented: Bool = false
     @EnvironmentObject var recipeViewModel: RecipeViewModel
+    
+    @Environment(\.managedObjectContext) var moc
     var body: some View {
         NavigationStack {
-            VStack (spacing: 0){
-                
+            
+            VStack {
                 Text("Adicionar Imagem")
                     .font(.largeTitle)
                     .bold()
                     .padding()
-                if recipeViewModel.recipe.image != nil {
-                    HorizontalRecipeView(recipe: recipeViewModel.recipe)
-                       
-                }
-                Spacer()
-                Button(action: {
-                    self.isImagePickerPresented = true
-                }) {
-                    Text("Selecionar Imagem")
-                }
-                .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
-                    ImagePicker(image: self.$image)
-                }
-                
-                Spacer()
-                VStack(alignment: .leading) {
-                    NavigationLink(destination: RecipeDetailsView(recipe: recipeViewModel.recipe)) {
+                ScrollView {
+                    VStack (spacing: 40){
+                            if recipeViewModel.recipe.image != nil {
+                                CardRecipeView(recipe: recipeViewModel.recipe)
+                            }
                         
-                        HStack {
-                            Spacer()
-                            Text("Proximo")
-                                .padding()
-                                .background(Color(UIColor.systemGray6))
-                                .cornerRadius(10)
+                        Spacer()
+                        Button(action: {
+                            self.isImagePickerPresented = true
+                        }) {
+                            Text("Selecionar Imagem")
+                        }
+                        .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
+                            ImagePicker(image: self.$image)
+                        }
+                        
+                        Spacer()
+                        VStack(alignment: .leading) {
+                            NavigationLink(destination: RecipeDetailsView(recipe: recipeViewModel.recipe)) {
+                                
+                                HStack {
+                                    Spacer()
+                                    Text("Proximo")
+                                        .padding()
+                                        .background(Color(UIColor.systemGray6))
+                                        .cornerRadius(10)
+                                }
+                            }.padding()
                         }
                     }.padding()
                 }
-            }.padding()
+            }
         }
     }
     
     func loadImage() {
-        if let selectedImage = image {
-            recipeViewModel.recipe.image = selectedImage
-        }
+        recipeViewModel.recipe.image = image?.base64
     }
 }
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var image: Image?
+    @Binding var image: UIImage?
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -84,7 +88,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let uiImage = info[.originalImage] as? UIImage {
-                parent.image = Image(uiImage: uiImage)
+                parent.image = uiImage
             }
 
             picker.dismiss(animated: true)

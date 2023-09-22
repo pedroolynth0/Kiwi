@@ -8,5 +8,5 @@
 import SwiftUI
 
 class RecipeViewModel: ObservableObject {
-   @Published var recipe: Recipe = Recipe(name: "", category: "", description: "", image: Image(""), steps: [""], ingredients: [""], difficulty: "", time: "", meal: "")
+    @Published var recipe: Recipe = Recipe(_id: "1", name: "", category: "Fast-Food", description: "", image: "", steps: [""], ingredients: [""], difficulty: "Fácil", time: "00:00", meal: "")
 }
