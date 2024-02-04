@@ -20,6 +20,7 @@ struct NavigationTab: View {
                     }
                 AddRecipeView()
                 .environmentObject(RecipeViewModel())
+                .environmentObject(RecipeFlow())
                     .tabItem{
                         Label("Adicionar Receita", systemImage: "plus")
                     }

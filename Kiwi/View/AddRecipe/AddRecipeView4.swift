@@ -18,6 +18,7 @@ struct AddRecipeView4: View {
         NavigationStack {
             
             VStack {
+                
                 Text("Adicionar Imagem")
                     .font(.largeTitle)
                     .bold()
@@ -39,17 +40,8 @@ struct AddRecipeView4: View {
                         }
                         
                         Spacer()
-                        VStack(alignment: .leading) {
-                            NavigationLink(destination: RecipeDetailsView(recipe: recipeViewModel.recipe)) {
-                                
-                                HStack {
-                                    Spacer()
-                                    Text("Proximo")
-                                        .padding()
-                                        .background(Color(UIColor.systemGray6))
-                                        .cornerRadius(10)
-                                }
-                            }.padding()
+                        Button(action: addStep) {
+                            Label("Salvar Receita", systemImage: "plus.circle")
                         }
                     }.padding()
                 }
@@ -60,6 +52,10 @@ struct AddRecipeView4: View {
     func loadImage() {
         recipeViewModel.recipe.image = image?.base64
     }
+    private func addStep() {
+        RecipeManager.saveRecipe(recipeViewModel.recipe)
+    }
+
 }
 
 struct ImagePicker: UIViewControllerRepresentable {

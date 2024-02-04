@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct ForMeView: View {
-    let recipeData = RecipeData().recipes
+    let recipeData = RecipeManager.loadRecipes()
+    let server = Server()
     var body: some View {
         
         NavigationStack{
             ScrollView{
+
                 VStack(alignment: .leading, spacing: 20){
                     Text("For Me")
                         .font(.largeTitle)
@@ -35,6 +37,8 @@ struct ForMeView: View {
                 .padding()
                 Spacer()
             }
+        }.onAppear{
+            server.get()
         }
     }
 }

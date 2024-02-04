@@ -33,9 +33,10 @@ func get(){
         
         do {
             let parsed = try JSONDecoder().decode([Recipe].self, from: data)
-            
             DispatchQueue.main.async {
                 self?.chars = parsed
+                print(self?.chars as Any)
+                print(self?.chars.count as Any)
             }
         }catch{
                 print(error)
@@ -56,7 +57,7 @@ func get(){
             "name": "\(recipe.name)",
             "category": "\(recipe.category)",
             "description": "(\(recipe.description)",
-            "image": "\(recipe.image)",
+            "image": "\(String(describing: recipe.image))",
             "steps": "\(recipe.steps)",
             "ingredients" : "\(recipe.ingredients)",
             "difficulty": "\(recipe.difficulty)",
@@ -142,7 +143,7 @@ func delete(recipe: Recipe) {
                 }
 
                 if let data = data {
-                    if let responseMessage = String(data: data, encoding: .utf8) {
+                    if String(data: data, encoding: .utf8) != nil {
                         DispatchQueue.main.async {
                            
                             

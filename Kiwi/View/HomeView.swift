@@ -18,8 +18,6 @@ struct HomeView: View {
                     .padding(16.0)
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(20)
-                
-
             }
             .padding(20.0)
             .background(Color.white)

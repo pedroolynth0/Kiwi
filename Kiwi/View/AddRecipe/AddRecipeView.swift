@@ -2,23 +2,24 @@ import SwiftUI
 
 struct AddRecipeView: View {
     @StateObject var recipeViewModel = RecipeViewModel()
+    @EnvironmentObject var recipeFlow: RecipeFlow
+    
     let difficultyOptions = ["Fácil","Médio","Difícil"]
     let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
-    let recipeData = RecipeData().recipes
     @State var selectedTime = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date()) ?? Date()
     
     @State private var dynamicDescriptionHeight: CGFloat = 50
     
     var body: some View {
         
-        NavigationStack {
+        NavigationStack(path: $recipeFlow.path) {
             VStack {
                 Text("Adicionar Receita")
                     .font(.largeTitle)
                     .bold()
                 ScrollView {
                     LazyVStack(spacing: 10){
-
+                        
                         VStack(alignment: .leading){
                             Text("Nome:")
                                 .padding([.top, .leading, .trailing])
@@ -44,8 +45,8 @@ struct AddRecipeView: View {
                                     // Atualiza a altura do campo de texto de descrição conforme o usuário digita
                                     dynamicDescriptionHeight = getHeightForText(newValue)
                                 }
-
-
+                            
+                            
                         }
                         VStack(alignment: .leading){
                             Text("Dificuldade:")
@@ -55,7 +56,7 @@ struct AddRecipeView: View {
                                 .padding(10.0)
                                 .background(Color(UIColor.systemGray6))
                                 .cornerRadius(10)
-                                
+                            
                         }
                         VStack(alignment: .leading){
                             Text("Categoria:")
@@ -65,7 +66,7 @@ struct AddRecipeView: View {
                                 .padding(10.0)
                                 .background(Color(UIColor.systemGray6))
                                 .cornerRadius(10)
-                                
+                            
                         }
                         
                         HStack {
@@ -75,15 +76,16 @@ struct AddRecipeView: View {
                                 .environment(\.locale, Locale(identifier: "en_GB"))
                                 .onChange(of: selectedTime) { newValue in
                                     recipeViewModel.recipe.time = formatTime(newValue)
-                                                }
+                                }
                             Spacer()
                         }.padding()
-
+                        
                         Spacer()
                         
                         VStack(alignment: .leading) {
-                            NavigationLink(destination: AddRecipeView2()) {
-                                
+                            Button(action: {
+                                recipeFlow.navigateToAddRecipeView()
+                            }) {
                                 HStack {
                                     Spacer()
                                     Text("Proximo")
@@ -92,18 +94,19 @@ struct AddRecipeView: View {
                                         .cornerRadius(10)
                                 }
                             }
-                            
-                            .padding()
                         }
                     }.padding()
                 }
             }
-           
+            
         }
         .environmentObject(recipeViewModel)
+        .navigationDestination(for: RecipeNavigation.self) { destination in
+            RecipeViewFactory.setViewForDestination(.addRecipeView)
+        }
     }
     
-
+    
 }
 
 extension AddRecipeView {
@@ -123,7 +126,7 @@ extension AddRecipeView {
         formatter.dateFormat = "HH:mm" // Formato de 24 horas
         return formatter.string(from: date)
     }
-
+    
     private func getHeightForText(_ text: String) -> CGFloat {
         let textWidth = UIScreen.main.bounds.size.width - 32
         let boundingRect = CGSize(width: textWidth, height: .infinity)
@@ -134,7 +137,7 @@ extension AddRecipeView {
     private func addStep() {
         recipeViewModel.recipe.steps.append("")
     }
-
+    
     private func deleteStep(at offsets: IndexSet) {
         recipeViewModel.recipe.steps.remove(atOffsets: offsets)
     }

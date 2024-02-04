@@ -3,9 +3,6 @@ import SwiftUI
 struct AddRecipeView3: View {
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
- 
-    
-    let recipeData = RecipeData().recipes
     
     @State private var dynamicDescriptionHeight: CGFloat = 100
     
