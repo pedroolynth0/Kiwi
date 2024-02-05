@@ -12,10 +12,10 @@ struct AddRecipeView4: View {
     @State private var image: UIImage? = nil
     @State private var isImagePickerPresented: Bool = false
     @EnvironmentObject var recipeViewModel: RecipeViewModel
-    
+    @EnvironmentObject var recipeFlow: RecipeFlow
     @Environment(\.managedObjectContext) var moc
     var body: some View {
-        NavigationStack {
+
             
             VStack {
                 
@@ -46,7 +46,7 @@ struct AddRecipeView4: View {
                     }.padding()
                 }
             }
-        }
+        
     }
     
     func loadImage() {
@@ -54,6 +54,7 @@ struct AddRecipeView4: View {
     }
     private func addStep() {
         RecipeManager.saveRecipe(recipeViewModel.recipe)
+        recipeFlow.done()
     }
 
 }

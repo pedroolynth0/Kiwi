@@ -18,7 +18,7 @@ struct NavigationTab: View {
                                 .frame(width: 10,height: 10)
                             Text("For me")
                     }
-                AddRecipeView()
+                MyRecipesView()
                 .environmentObject(RecipeViewModel())
                 .environmentObject(RecipeFlow())
                     .tabItem{

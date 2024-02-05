@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ForMeView: View {
-    let recipeData = RecipeManager.loadRecipes()
+    var recipeData = RecipeManager.loadRecipes()
     let server = Server()
     var body: some View {
         

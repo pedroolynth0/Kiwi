@@ -3,12 +3,13 @@ import SwiftUI
 struct AddRecipeView3: View {
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
+    @EnvironmentObject var recipeFlow: RecipeFlow
     
     @State private var dynamicDescriptionHeight: CGFloat = 100
     
     var body: some View {
         
-        NavigationStack {
+
             VStack {
                 Text("Ingredientes")
                     .font(.largeTitle)
@@ -36,8 +37,9 @@ struct AddRecipeView3: View {
                             Label("Adicionar Ingrediente", systemImage: "plus.circle")
                         }
                         VStack(alignment: .leading) {
-                            NavigationLink(destination: AddRecipeView4()) {
-                                
+                            Button(action: {
+                                recipeFlow.navigateToAddRecipeView4()
+                            }) {
                                 HStack {
                                     Spacer()
                                     Text("Proximo")
@@ -45,7 +47,7 @@ struct AddRecipeView3: View {
                                         .background(Color(UIColor.systemGray6))
                                         .cornerRadius(10)
                                 }
-                            }.padding()
+                            }
                         }
 
                         Spacer()
@@ -53,7 +55,7 @@ struct AddRecipeView3: View {
                     }.padding()
                 }
             }
-        }.environmentObject(RecipeViewModel())
+        .environmentObject(RecipeViewModel())
     }
     
 

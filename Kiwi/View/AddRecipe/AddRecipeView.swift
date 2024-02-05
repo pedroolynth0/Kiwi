@@ -12,7 +12,6 @@ struct AddRecipeView: View {
     
     var body: some View {
         
-        NavigationStack(path: $recipeFlow.path) {
             VStack {
                 Text("Adicionar Receita")
                     .font(.largeTitle)
@@ -84,7 +83,7 @@ struct AddRecipeView: View {
                         
                         VStack(alignment: .leading) {
                             Button(action: {
-                                recipeFlow.navigateToAddRecipeView()
+                                recipeFlow.navigateToAddRecipeView2()
                             }) {
                                 HStack {
                                     Spacer()
@@ -98,12 +97,10 @@ struct AddRecipeView: View {
                     }.padding()
                 }
             }
-            
-        }
+
+
+        
         .environmentObject(recipeViewModel)
-        .navigationDestination(for: RecipeNavigation.self) { destination in
-            RecipeViewFactory.setViewForDestination(.addRecipeView)
-        }
     }
     
     
