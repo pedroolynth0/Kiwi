@@ -46,9 +46,12 @@ struct HorizontalRecipeView: View {
             }
             .padding(.trailing, 4.0)
             
+            Spacer()
         }
+        .frame(maxWidth: .infinity)
         .background(Color(UIColor.systemGray6))
         .cornerRadius(10.0)
+        .padding([.top, .leading, .trailing])
         
     }
 }

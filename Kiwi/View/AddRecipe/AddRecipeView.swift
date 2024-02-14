@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AddRecipeView: View {
-    @StateObject var recipeViewModel = RecipeViewModel()
+    @EnvironmentObject var recipeViewModel: RecipeViewModel
     @EnvironmentObject var recipeFlow: RecipeFlow
     
     let difficultyOptions = ["Fácil","Médio","Difícil"]
@@ -97,10 +97,7 @@ struct AddRecipeView: View {
                     }.padding()
                 }
             }
-
-
-        
-        .environmentObject(recipeViewModel)
+            .environmentObject(RecipeViewModel())
     }
     
     
@@ -143,5 +140,6 @@ extension AddRecipeView {
 struct AddReceitaView_Previews: PreviewProvider {
     static var previews: some View {
         AddRecipeView()
+            .environmentObject(RecipeViewModel())
     }
 }

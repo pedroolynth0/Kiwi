@@ -27,9 +27,9 @@ class RecipeViewFactory {
                 return AnyView(EmptyView())
             }
         case .forMeView:
-            return AnyView(AddRecipeView())
+            return AnyView(ForMeView())
         case .categoryView:
-            return AnyView(AddRecipeView())
+            return AnyView(CategoryView(category: ""))
         }
     }
 }

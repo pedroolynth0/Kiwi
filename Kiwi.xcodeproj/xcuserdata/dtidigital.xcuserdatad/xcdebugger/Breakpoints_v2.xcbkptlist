@@ -81,6 +81,36 @@
                   endingLineNumber = "88"
                   offsetFromSymbolStart = "108">
                </Location>
+               <Location
+                  uuid = "ADC283A8-1B2A-4BC7-9C65-1D6EF529C240 - b1e10fa1adf95568"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #6 () -&gt; SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "ADC283A8-1B2A-4BC7-9C65-1D6EF529C240 - 35cdb28d4a739ab9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #6 () -&gt; SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "148">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -144,6 +174,51 @@
                   endingLineNumber = "0"
                   offsetFromSymbolStart = "16">
                </Location>
+               <Location
+                  uuid = "7DD02ADD-414E-44CC-80A3-0452104D4666 - 36f9321f65172d99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.recipeViewModel.getter : Kiwi.RecipeViewModel"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7DD02ADD-414E-44CC-80A3-0452104D4666 - 3b755dacb813afa3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.$recipeViewModel.getter : SwiftUI.EnvironmentObject&lt;Kiwi.RecipeViewModel&gt;.Wrapper"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7DD02ADD-414E-44CC-80A3-0452104D4666 - 5510989283b9973c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of Kiwi.AddRecipeView2.init(recipeViewModel: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeViewModel&gt;, recipeFlow: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeFlow&gt;) -&gt; Kiwi.AddRecipeView2"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,6 +267,36 @@
                   endingLineNumber = "5"
                   offsetFromSymbolStart = "44">
                </Location>
+               <Location
+                  uuid = "E7813194-2ABB-4257-A266-4AAD00EC3E7B - 5da3525ed210f42d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.init() -&gt; Kiwi.AddRecipeView2"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "E7813194-2ABB-4257-A266-4AAD00EC3E7B - 2c09839f41b5e0d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.init(recipeViewModel: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeViewModel&gt;, recipeFlow: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeFlow&gt;) -&gt; Kiwi.AddRecipeView2"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "52">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -209,6 +314,53 @@
             endingLineNumber = "6"
             landmarkName = "AddRecipeView2"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C1D5B143-FC89-4807-A912-BB376DB4DBBC - 601e6c3605a4a467"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.recipeFlow.getter : Kiwi.RecipeFlow"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "C1D5B143-FC89-4807-A912-BB376DB4DBBC - c8bfd2c090c79303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.$recipeFlow.getter : SwiftUI.EnvironmentObject&lt;Kiwi.RecipeFlow&gt;.Wrapper"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C1D5B143-FC89-4807-A912-BB376DB4DBBC - 8efc78e23bfd593f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of Kiwi.AddRecipeView2.init(recipeViewModel: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeViewModel&gt;, recipeFlow: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeFlow&gt;) -&gt; Kiwi.AddRecipeView2"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -255,6 +407,36 @@
                   startingLineNumber = "8"
                   endingLineNumber = "8"
                   offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "7C5E8E53-063D-4910-B7A4-FCA0386B6B63 - 272a0f8396be0001"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Kiwi.AddRecipeView2.dynamicDescriptionHeight : CoreGraphics.CGFloat"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7C5E8E53-063D-4910-B7A4-FCA0386B6B63 - 2c09839f41b5e137"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.init(recipeViewModel: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeViewModel&gt;, recipeFlow: SwiftUI.EnvironmentObject&lt;Kiwi.RecipeFlow&gt;) -&gt; Kiwi.AddRecipeView2"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "224">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -336,6 +518,36 @@
                   endingLineNumber = "13"
                   offsetFromSymbolStart = "244">
                </Location>
+               <Location
+                  uuid = "2E88EB37-46CF-46B9-83DE-102B547ACA0E - 8999d46ee935e002"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "2E88EB37-46CF-46B9-83DE-102B547ACA0E - 5130717b7aedc8ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "340">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -383,6 +595,36 @@
                   startingLineNumber = "14"
                   endingLineNumber = "14"
                   offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "50232ABC-9A94-444A-880D-2901E94596D7 - 8999d46ee935e002"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "50232ABC-9A94-444A-880D-2901E94596D7 - 5130717b7aedc8ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "340">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -480,6 +722,36 @@
                   endingLineNumber = "18"
                   offsetFromSymbolStart = "400">
                </Location>
+               <Location
+                  uuid = "B13A9DC5-398E-45FE-BB96-387AD2FEAA93 - 5130717b7aedc86e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "920">
+               </Location>
+               <Location
+                  uuid = "B13A9DC5-398E-45FE-BB96-387AD2FEAA93 - 4f12e3f261a81d3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "572">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -527,6 +799,36 @@
                   startingLineNumber = "21"
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "843973F9-BB3E-4DBB-B0A8-B6D06F100D25 - 49b86c46f9b59096"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "843973F9-BB3E-4DBB-B0A8-B6D06F100D25 - 586c069825887d0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "472">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -576,6 +878,36 @@
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "260">
                </Location>
+               <Location
+                  uuid = "63D440FB-6743-4DF0-9C27-1B0E3F08D855 - 586c069825887cca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "63D440FB-6743-4DF0-9C27-1B0E3F08D855 - 1f7b85e35fa19598"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.DynamicViewContent.onDelete(perform: Swift.Optional&lt;(Foundation.IndexSet) -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "340">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -624,6 +956,36 @@
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "260">
                </Location>
+               <Location
+                  uuid = "67D8C089-610E-45C5-BAD1-B0E046CB7C71 - 586c069825887cca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "67D8C089-610E-45C5-BAD1-B0E046CB7C71 - 1f7b85e35fa19598"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.DynamicViewContent.onDelete(perform: Swift.Optional&lt;(Foundation.IndexSet) -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "340">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -671,6 +1033,36 @@
                   startingLineNumber = "21"
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "0A2252CD-30D7-44D8-A91A-3F19150A7902 - 49b86c46f9b59096"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "0A2252CD-30D7-44D8-A91A-3F19150A7902 - 586c069825887d0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.scrollContentBackground(SwiftUI.Visibility) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Button&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Kiwi.AddRecipeView2.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/AddRecipe/AddRecipeView2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "472">
                </Location>
             </Locations>
          </BreakpointContent>

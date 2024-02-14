@@ -23,6 +23,8 @@ struct CategoryView: View {
                             if (recipe.category == category || recipe.meal == category){
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
                                     HorizontalRecipeView(recipe: recipe)
+                                        .padding()
+                                        
                                 }
                             }
                         }

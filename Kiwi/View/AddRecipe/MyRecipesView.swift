@@ -18,6 +18,7 @@ struct MyRecipesView: View {
                     Text("Minhas Receitas")
                         .font(.largeTitle)
                         .bold()
+                        .padding()
                     VStack (alignment: .leading){
                         ForEach(RecipeManager.loadRecipes(), id: \.uniqueID){ recipe in
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
@@ -25,7 +26,7 @@ struct MyRecipesView: View {
                                 }
                         }
                     }
-                }.padding()
+                }
                 
                 VStack(alignment: .leading) {
                     Button(action: {
