@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     let category: String
-    var recipeData = RecipeData().recipes
+    var recipeData = RecipeManager.loadRecipes()
     var body: some View {
         
         NavigationStack {
@@ -24,7 +24,6 @@ struct CategoryView: View {
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
                                     HorizontalRecipeView(recipe: recipe)
                                         .padding()
-                                        
                                 }
                             }
                         }

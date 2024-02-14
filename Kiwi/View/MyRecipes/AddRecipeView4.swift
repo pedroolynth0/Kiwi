@@ -13,7 +13,6 @@ struct AddRecipeView4: View {
     @State private var isImagePickerPresented: Bool = false
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     @EnvironmentObject var recipeFlow: RecipeFlow
-    @Environment(\.managedObjectContext) var moc
     var body: some View {
 
             

@@ -14,7 +14,9 @@ struct RecipeManager {
 
     static func saveRecipe(_ recipe: Recipe) {
         var existingRecipes = loadRecipes()
-        existingRecipes.append(recipe)
+        var tmp = recipe
+        tmp._id = String(existingRecipes.count)
+        existingRecipes.append(tmp)
         
         do {
             let encoder = PropertyListEncoder()

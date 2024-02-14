@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MyRecipesView: View {
     @EnvironmentObject var recipeFlow: RecipeFlow
-    @State var Teste = ""
     var body: some View {
         NavigationStack(path: $recipeFlow.path) {
             ScrollView {

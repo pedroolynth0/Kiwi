@@ -139,6 +139,7 @@
 				B71560622A9EAA6000164130 /* View */,
 				B7A6DFAD2AA000AC002E0227 /* Navigation */,
 				B715606F2A9EB1C100164130 /* Utility */,
+				B71560392A9EA9B100164130 /* Preview Content */,
 			);
 			path = Kiwi;
 			sourceTree = "<group>";
@@ -171,7 +172,7 @@
 		B71560622A9EAA6000164130 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B7F711AD2AB0E60F0029E2B1 /* AddRecipe */,
+				B7F711AD2AB0E60F0029E2B1 /* MyRecipes */,
 				B7BDBECB2B7D4BA5006E33FE /* RecipeDetails */,
 				B7BDBECD2B7D4BC6006E33FE /* ForMe */,
 				B7BDBED02B7D4C2A006E33FE /* Category */,
@@ -253,14 +254,13 @@
 		B7BDBED22B7D4C56006E33FE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B71560392A9EA9B100164130 /* Preview Content */,
 				B71560332A9EA9AF00164130 /* KiwiApp.swift */,
 				B71560372A9EA9B100164130 /* Assets.xcassets */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		B7F711AD2AB0E60F0029E2B1 /* AddRecipe */ = {
+		B7F711AD2AB0E60F0029E2B1 /* MyRecipes */ = {
 			isa = PBXGroup;
 			children = (
 				B715606D2A9EADB000164130 /* AddRecipeView.swift */,
@@ -269,7 +269,7 @@
 				B7F711B22AB112B40029E2B1 /* AddRecipeView4.swift */,
 				B7DA9A272B7009E600CAF660 /* MyRecipesView.swift */,
 			);
-			path = AddRecipe;
+			path = MyRecipes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
