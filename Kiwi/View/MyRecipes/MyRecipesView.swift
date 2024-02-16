@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MyRecipesView: View {
     @EnvironmentObject var recipeFlow: RecipeFlow
+    @StateObject var viewModel = MyRecipesViewModel()
+    
     var body: some View {
         NavigationStack(path: $recipeFlow.path) {
             ScrollView {
@@ -19,7 +21,7 @@ struct MyRecipesView: View {
                         .bold()
                         .padding()
                     VStack (alignment: .leading){
-                        ForEach(RecipeManager.loadRecipes(), id: \.uniqueID){ recipe in
+                        ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
                                     HorizontalRecipeView(recipe: recipe)
                                 }
@@ -46,6 +48,7 @@ struct MyRecipesView: View {
                 }
             }
         }
+        .onAppear{ viewModel.getData() }
     }
 }
 

@@ -52,8 +52,13 @@ struct AddRecipeView4: View {
         recipeViewModel.recipe.image = image?.base64
     }
     private func addStep() {
-        RecipeManager.saveRecipe(recipeViewModel.recipe)
-        recipeFlow.done()
+        do {
+            try RecipeManager.saveRecipe(recipeViewModel.recipe)
+        } catch RecipeError.saveFailure(let reason ) {
+            print("Erro ao salvar a receita")
+        } catch {
+            print("Ocorreu um erro ao criar a receita")
+        }
     }
 
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CategoryView: View {
     let category: String
-    var recipeData = RecipeManager.loadRecipes()
+    @StateObject var viewModel = CategoryViewModel()
+    
     var body: some View {
         
         NavigationStack {
@@ -19,7 +20,7 @@ struct CategoryView: View {
                         .font(.largeTitle)
                         .bold()
                     VStack (alignment: .leading){
-                        ForEach(recipeData, id: \.uniqueID){ recipe in
+                        ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                             if (recipe.category == category || recipe.meal == category){
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
                                     HorizontalRecipeView(recipe: recipe)
@@ -32,6 +33,7 @@ struct CategoryView: View {
                 }.padding()
             }
         }
+        .onAppear{ viewModel.getData() }
     }
 }
 

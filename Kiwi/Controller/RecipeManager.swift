@@ -11,36 +11,55 @@ import Foundation
 struct RecipeManager {
     private static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private static let archiveURL = documentsDirectory.appendingPathComponent("recipes").appendingPathExtension("plist")
-
-    static func saveRecipe(_ recipe: Recipe) {
-        var existingRecipes = loadRecipes()
-        var tmp = recipe
-        tmp._id = String(existingRecipes.count)
-        existingRecipes.append(tmp)
-        
+    
+    static func saveRecipe(_ recipe: Recipe) throws {
         do {
-            let encoder = PropertyListEncoder()
-            let data = try encoder.encode(existingRecipes)
-            try data.write(to: archiveURL, options: .noFileProtection)
+            var existingRecipes = try loadRecipes()
+            var tmp = recipe
+            tmp._id = String(existingRecipes.count)
+            existingRecipes.append(tmp)
+            
+            do {
+                let encoder = PropertyListEncoder()
+                let data = try encoder.encode(existingRecipes)
+                try data.write(to: archiveURL, options: .noFileProtection)
+            } catch {
+                throw RecipeError.saveFailure(reason: "Error saving recipe: \(error)")
+            }
         } catch {
-            print("Error saving recipe: \(error)")
+            throw RecipeError.deleteFailure(reason: "Error deleting recipe: \(error)")
+        }
+    }
+    
+    static func deleteRecipe(_ recipeID: String) throws {
+        do {
+            var existingRecipes = try loadRecipes()
+            existingRecipes.removeAll { $0._id == recipeID }
+            
+            do {
+                let encoder = PropertyListEncoder()
+                let data = try encoder.encode(existingRecipes)
+                try data.write(to: archiveURL, options: .noFileProtection)
+            } catch {
+                throw RecipeError.deleteFailure(reason: "Error deleting recipe: \(error)")
+            }
+        } catch {
+            throw RecipeError.loadFailure(reason: "Error deleting recipe: \(error)")
+        }
+    }
+    
+    static func updateRecipe(_ updatedRecipe: Recipe) throws {
+        var existingRecipes = try loadRecipes()
+        
+        if let index = existingRecipes.firstIndex(where: { $0._id == updatedRecipe._id }) {
+            existingRecipes[index] = updatedRecipe
+        }
+        else {
+            throw RecipeError.recipeNotFound
         }
     }
 
-    static func deleteRecipe(_ recipeID: String) {
-        var existingRecipes = loadRecipes()
-        existingRecipes.removeAll { $0._id == recipeID }
-        
-        do {
-            let encoder = PropertyListEncoder()
-            let data = try encoder.encode(existingRecipes)
-            try data.write(to: archiveURL, options: .noFileProtection)
-        } catch {
-            print("Error deleting recipe: \(error)")
-        }
-    }
-
-    static func loadRecipes() -> [Recipe] {
+    static func loadRecipes() throws -> [Recipe] {
         do {
             let data = try Data(contentsOf: archiveURL)
             let decoder = PropertyListDecoder()

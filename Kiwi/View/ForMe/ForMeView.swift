@@ -1,13 +1,11 @@
 import SwiftUI
 
 struct ForMeView: View {
-    var recipeData = RecipeManager.loadRecipes()
-    let server = Server()
+    @StateObject var viewModel = ForMeViewModel()
+    
     var body: some View {
-        
         NavigationStack{
             ScrollView{
-
                 VStack(alignment: .leading, spacing: 20){
                     Text("For Me")
                         .font(.largeTitle)
@@ -38,7 +36,7 @@ struct ForMeView: View {
                 Spacer()
             }
         }.onAppear{
-            server.get()
+            viewModel.getData()
         }
     }
 }
@@ -83,7 +81,7 @@ extension ForMeView{
             }
             ScrollView(.horizontal, showsIndicators: false){
                 HStack {
-                    ForEach(recipeData, id: \.uniqueID){ recipe in
+                    ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                         if (recipe.category == label){
                             NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
                                 CardRecipeView(recipe: recipe)
