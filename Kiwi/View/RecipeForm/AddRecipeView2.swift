@@ -2,15 +2,10 @@ import SwiftUI
 
 struct AddRecipeView2: View {
     @EnvironmentObject var recipeViewModel: RecipeViewModel
-    let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
     @EnvironmentObject var recipeFlow: RecipeFlow
     
-    @State private var dynamicDescriptionHeight: CGFloat = 100
-    
-
     var body: some View {
         
-
             VStack {
                 Text("Etapas")
                     .font(.largeTitle)
@@ -57,7 +52,6 @@ struct AddRecipeView2: View {
                 }
             }
         
-        .environmentObject(RecipeViewModel())
     }
     
 

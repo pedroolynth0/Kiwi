@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyRecipesView: View {
     @EnvironmentObject var recipeFlow: RecipeFlow
+    @EnvironmentObject var recipeViewModel: RecipeViewModel
     @StateObject var viewModel = MyRecipesViewModel()
     
     var body: some View {
@@ -31,6 +32,8 @@ struct MyRecipesView: View {
                 
                 VStack(alignment: .leading) {
                     Button(action: {
+                        recipeViewModel.cleanCache()
+                        recipeViewModel.option = .addRecipe
                         recipeFlow.navigateToAddRecipeView()
                     }) {
                         HStack {

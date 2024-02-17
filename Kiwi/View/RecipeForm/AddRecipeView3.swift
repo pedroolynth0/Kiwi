@@ -2,10 +2,7 @@ import SwiftUI
 
 struct AddRecipeView3: View {
     @EnvironmentObject var recipeViewModel: RecipeViewModel
-    let categoryOptions = ["Fast-Food", "Pizza", "Massa"]
     @EnvironmentObject var recipeFlow: RecipeFlow
-    
-    @State private var dynamicDescriptionHeight: CGFloat = 100
     
     var body: some View {
         
@@ -49,13 +46,10 @@ struct AddRecipeView3: View {
                                 }
                             }
                         }
-
                         Spacer()
-                        
                     }.padding()
                 }
             }
-        .environmentObject(RecipeViewModel())
     }
     
 

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ForMeView: View {
     @StateObject var viewModel = ForMeViewModel()
-    
+
     var body: some View {
         NavigationStack{
             ScrollView{

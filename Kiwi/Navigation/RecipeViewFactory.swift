@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class RecipeViewFactory {
+    
     static func setViewForDestination(_ destination: RecipeNavigation, recipe: Recipe? = nil) -> AnyView {
         
         switch destination {

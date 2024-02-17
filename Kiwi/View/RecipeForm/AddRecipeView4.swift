@@ -39,7 +39,11 @@ struct AddRecipeView4: View {
                         }
                         
                         Spacer()
-                        Button(action: addStep) {
+                        Button(action: {
+                            recipeViewModel.finalStep()
+                            recipeViewModel.cleanCache()
+                            recipeFlow.done()
+                        }) {
                             Label("Salvar Receita", systemImage: "plus.circle")
                         }
                     }.padding()
@@ -50,15 +54,6 @@ struct AddRecipeView4: View {
     
     func loadImage() {
         recipeViewModel.recipe.image = image?.base64
-    }
-    private func addStep() {
-        do {
-            try RecipeManager.saveRecipe(recipeViewModel.recipe)
-        } catch RecipeError.saveFailure(let reason ) {
-            print("Erro ao salvar a receita")
-        } catch {
-            print("Ocorreu um erro ao criar a receita")
-        }
     }
 
 }

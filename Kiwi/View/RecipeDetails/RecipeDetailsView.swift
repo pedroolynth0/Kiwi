@@ -5,103 +5,98 @@ struct RecipeDetailsView: View {
     
     var body: some View {
         
-        ScrollView {
-            
-            VStack(alignment: .center, spacing: 20) {
-                GeometryReader {
-                    geometry in
-                    if let image = recipe.image?.imageFromBase64 {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geometry.size.width,height: geometry.size.height)
-                            .ignoresSafeArea()
-                            .clipped()
-                        
-                    }
-                    else {
-                       Image(systemName: "photo.fill")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geometry.size.width,height: geometry.size.height)
-                            .ignoresSafeArea()
-                            .clipped()
-                            .foregroundColor(Color(UIColor.systemGray5))
-                   }
-                }
-                .frame(height: 260)
-                
-                VStack(alignment: .leading,spacing: 10) {
-                    //MARK: Titulo
-                    HStack {
-                        VStack (alignment: .leading) {
-                            Text(recipe.name)
-                              .font(.largeTitle)
-                              .fontWeight(.heavy)
-                              .foregroundColor(.red)
+            ScrollView {
+                VStack(alignment: .center, spacing: 20) {
+                    GeometryReader {
+                        geometry in
+                        if let image = recipe.image?.imageFromBase64 {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: geometry.size.width,height: geometry.size.height)
+                                .ignoresSafeArea()
+                                .clipped()
                             
-                            Text("By Pedro Olyntho")
-                                .font(.footnote)
-                                .foregroundColor(Color.gray)
                         }
-                        Spacer()
-                        Image(systemName: "star.fill")
-                            .foregroundColor(Color.yellow)
-                    }//: Titulo
-                    
-                    HStack(spacing: 20){
-                        HStack(){
-                            Image(systemName: "clock")
-                            Text(recipe.time)
-                        }
-                        HStack{
-                            Image(systemName: "chart.bar")
-                            Text(recipe.difficulty)
+                        else {
+                            Image(systemName: "photo.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: geometry.size.width,height: geometry.size.height)
+                                .ignoresSafeArea()
+                                .clipped()
+                                .foregroundColor(Color(UIColor.systemGray5))
                         }
                     }
-                    .font(.callout)
-                    .foregroundColor(Color.gray)
+                    .frame(height: 260)
                     
-                    
-                    Text("Descrição")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .padding(.vertical, 5.0)
-                    
-                    Text(recipe.description)
+                    VStack(alignment: .leading,spacing: 10) {
+                        //MARK: Titulo
+                        HStack {
+                            VStack (alignment: .leading) {
+                                Text(recipe.name)
+                                    .font(.largeTitle)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(.red)
+                                
+                                Text("By Pedro Olyntho")
+                                    .font(.footnote)
+                                    .foregroundColor(Color.gray)
+                            }
+                            Spacer()
+                            Image(systemName: "star.fill")
+                                .foregroundColor(Color.yellow)
+                        }
+                        
+                        HStack(spacing: 20){
+                            HStack(){
+                                Image(systemName: "clock")
+                                Text(recipe.time)
+                            }
+                            HStack{
+                                Image(systemName: "chart.bar")
+                                Text(recipe.difficulty)
+                            }
+                        }
                         .font(.callout)
                         .foregroundColor(Color.gray)
-                    Text("Ingredientes")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .padding(.vertical, 5.0)
-                    
+                        
+                        Text("Descrição")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 5.0)
+                        
+                        Text(recipe.description)
+                            .font(.callout)
+                            .foregroundColor(Color.gray)
+                        Text("Ingredientes")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 5.0)
+                        
                         ForEach(recipe.ingredients, id: \.self){ ingredient in
                             Text("- " + ingredient)
                                 .font(.callout)
                                 .foregroundColor(.gray)
                         }
-                    Text("Instruções")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .padding(.vertical, 5.0)
-                    
-                    ForEach(0 ..< recipe.steps.count, id: \.self){ step in
+                        Text("Instruções")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 5.0)
                         
-                        Text("\(step + 1). \(recipe.steps[step])")
-                            .font(.callout)
-                            .foregroundColor(.gray)
+                        ForEach(0 ..< recipe.steps.count, id: \.self){ step in
+                            
+                            Text("\(step + 1). \(recipe.steps[step])")
+                                .font(.callout)
+                                .foregroundColor(.gray)
+                        }
                     }
+                    .padding(.horizontal)
+                    
                 }
-                .padding(.horizontal)
-            
-            }
-            .ignoresSafeArea()
-        }.edgesIgnoringSafeArea(.top)
-        
-    }
-    
-    
+                .ignoresSafeArea()
+            }.edgesIgnoringSafeArea(.top)
+        }
 }
 
 struct ReceitaDetalhesView_Previews: PreviewProvider {
