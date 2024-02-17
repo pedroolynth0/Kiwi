@@ -1067,5 +1067,101 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1AA0EC2-589B-4722-9397-236C389D128C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kiwi/View/ForMe/ForMeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D1AA0EC2-589B-4722-9397-236C389D128C - dd37fa50c8f519f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt; in Kiwi.ForMeView.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/ForMe/ForMeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "744">
+               </Location>
+               <Location
+                  uuid = "D1AA0EC2-589B-4722-9397-236C389D128C - dd37fa50c8f519f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of Kiwi.ForMeView.categoryButton(label: Swift.String, systemImage: Swift.String) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt; in Kiwi.ForMeView.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/ForMe/ForMeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "856">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B36A84CB-CE08-4B50-BF92-F811EBCFE762"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kiwi/View/ForMe/ForMeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B36A84CB-CE08-4B50-BF92-F811EBCFE762 - e1142f2194e69ec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt; in Kiwi.ForMeView.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/ForMe/ForMeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2152">
+               </Location>
+               <Location
+                  uuid = "B36A84CB-CE08-4B50-BF92-F811EBCFE762 - e1142f2194e69ec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0, SwiftUI.Divider, &lt;&lt;opaque return type of Kiwi.ForMeView.foodGrid(label: Swift.String) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt; in Kiwi.ForMeView.body.getter : some"
+                  moduleName = "Kiwi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dtidigital/Desktop/Apredizado/Conhecimentos%20em%20Pra%CC%81tica%20/Kiwi/Kiwi/Kiwi/View/ForMe/ForMeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

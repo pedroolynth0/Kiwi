@@ -11,28 +11,11 @@ struct HorizontalRecipeView: View {
     var recipe: Recipe
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     @EnvironmentObject var recipeFlow: RecipeFlow
+    var disabled: Bool = false
     var body: some View {
         HStack{
-            if let image = recipe.image?.imageFromBase64 {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(10.0)
-                    .clipped()
-                    .padding(8.0)
-                
-            }
-            else {
-               Image(systemName: "photo.fill")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(10.0)
-                    .clipped()
-                    .padding(8.0)
-                    .foregroundColor(Color(UIColor.systemGray5))
-           }
+            recipeImage(recipe.image)
+            
             VStack(alignment: .leading,spacing: 5) {
                 Text(recipe.name)
                     .fontWeight(.bold)
@@ -49,34 +32,15 @@ struct HorizontalRecipeView: View {
             .padding(.trailing, 4.0)
             
             Spacer()
-            VStack {
-                Button(action: {
-                    recipeViewModel.option = .editRecipe
-                    recipeViewModel.recipe = self.recipe
-                    recipeFlow.navigateToAddRecipeView()
-                }) {
-                    Image(systemName: "pencil")
-                }
-            }
-            .navigationDestination(for: RecipeNavigation.self) { destination in
-                RecipeViewFactory.setViewForDestination(destination)
-            }
-            VStack {
-                Button(action: {
-                    do {
-                        try RecipeManager.deleteRecipe(recipe._id)
-                    } catch {
-                        print("Erro ao tentar excluir uma receita")
+            if !disabled {
+                editButton()
+                    .navigationDestination(for: RecipeNavigation.self) { destination in
+                        RecipeViewFactory.setViewForDestination(destination)
                     }
-                    
-                }) {
-                    Image(systemName: "minus.circle")
-                }
+                deleteButton()
+                    .padding(.trailing, 8)
             }
-            .padding(.trailing, 8)
-            .navigationDestination(for: RecipeNavigation.self) { destination in
-                RecipeViewFactory.setViewForDestination(destination)
-            }
+
         }
         .frame(maxWidth: .infinity)
         .background(Color(UIColor.systemGray6))
@@ -87,7 +51,7 @@ struct HorizontalRecipeView: View {
 }
 
 
-extension HorizontalRecipeView{
+extension HorizontalRecipeView {
     private func iconGrid() -> some View{
         return HStack(spacing: 10){
             HStack{
@@ -113,7 +77,56 @@ extension HorizontalRecipeView{
             .clipped()
             .padding(8.0)
     }
+    
+    func recipeImage(_ base64Image: String?) -> some View {
+        Group {
+            if let image = recipe.image?.imageFromBase64 {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(10.0)
+                    .clipped()
+            } else {
+                Image(systemName: "photo.fill")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(10.0)
+                    .clipped()
+                    .foregroundColor(Color(UIColor.systemGray5))
+            }
+        }
+        .padding(8.0)
+    }
+    
+    func editButton() -> some View {
+        VStack {
+            Button(action: {
+                recipeViewModel.option = .editRecipe
+                recipeViewModel.recipe = self.recipe
+                recipeFlow.navigateToAddRecipeView()
+            }) {
+                Image(systemName: "pencil")
+            }
+        }
+    }
+    func deleteButton() -> some View {
+        return VStack {
+            Button(action: {
+                do {
+                    try RecipeManager.deleteRecipe(recipe._id)
+                } catch {
+                    print("Erro ao tentar excluir uma receita")
+                }
+                
+            }) {
+                Image(systemName: "minus.circle")
+            }
+        }
+    }
 }
+
 
 struct HorizontalRecipeView_Previews: PreviewProvider {
     static var previews: some View {

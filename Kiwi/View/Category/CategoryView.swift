@@ -19,18 +19,17 @@ struct CategoryView: View {
                     Text(category)
                         .font(.largeTitle)
                         .bold()
+                        .padding()
                     VStack (alignment: .leading){
                         ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                             if (recipe.category == category || recipe.meal == category){
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
-                                    HorizontalRecipeView(recipe: recipe)
-                                        .padding()
+                                    HorizontalRecipeView(recipe: recipe, disabled: true)
                                 }
                             }
                         }
                     }
-
-                }.padding()
+                }
             }
         }
         .onAppear{ viewModel.getData() }
