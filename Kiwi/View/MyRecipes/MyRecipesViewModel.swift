@@ -12,6 +12,7 @@ class MyRecipesViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     @Published var recipeData: [Recipe] = []
+
     
     init() {
         observeRecipeChanges()

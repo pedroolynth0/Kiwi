@@ -11,6 +11,7 @@ struct HorizontalRecipeView: View {
     var recipe: Recipe
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     @EnvironmentObject var recipeFlow: RecipeFlow
+    @State var showAlert = false
     var disabled: Bool = false
     var body: some View {
         HStack{
@@ -46,7 +47,20 @@ struct HorizontalRecipeView: View {
         .background(Color(UIColor.systemGray6))
         .cornerRadius(10.0)
         .padding([.top, .leading, .trailing])
-        
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Atenção"),
+                message: Text("Deseja realmente remover uma receita?"),
+                primaryButton: .default(Text("Remover"), action: {
+                    do {
+                        try RecipeManager.deleteRecipe(recipe._id)
+                    } catch {
+                        print("Não foi possivel remover essa receita")
+                    }
+                }),
+                secondaryButton: .cancel(Text("Cancelar"), action: {})
+            )
+        }
     }
 }
 
@@ -114,15 +128,21 @@ extension HorizontalRecipeView {
     func deleteButton() -> some View {
         return VStack {
             Button(action: {
-                do {
-                    try RecipeManager.deleteRecipe(recipe._id)
-                } catch {
-                    print("Erro ao tentar excluir uma receita")
-                }
-                
+                showAlert = true
             }) {
                 Image(systemName: "minus.circle")
             }
+        }
+    }
+    
+    func cardAlert(isPresented: Binding<Bool>, title: String, message: String, actionTitle: String = "OK", onDismiss: (() -> Void)? = nil, onAction: (() -> Void)? = nil) -> some View {
+        self.alert(isPresented: isPresented) {
+            Alert(
+                title: Text(title),
+                message: Text(message),
+                primaryButton: .default(Text(actionTitle), action: onAction ?? {}),
+                secondaryButton: .cancel(Text("Cancelar"), action: onDismiss)
+            )
         }
     }
 }
