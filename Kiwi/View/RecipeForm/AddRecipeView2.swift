@@ -3,79 +3,71 @@ import SwiftUI
 struct AddRecipeView2: View {
     @EnvironmentObject var recipeViewModel: RecipeViewModel
     @EnvironmentObject var recipeFlow: RecipeFlow
-    
+
     var body: some View {
-        
+        ZStack {
             VStack {
                 Text("Etapas")
                     .font(.largeTitle)
                     .bold()
                 ScrollView {
-                    LazyVStack(spacing: 20){
- 
-                        VStack(alignment: .leading) {
-
-                            List {
-                                ForEach(0..<recipeViewModel.recipe.steps.count, id: \.self) { index in
-                                    TextField("Etapa \(index + 1)", text: $recipeViewModel.recipe.steps[index])
-                                        .padding(16.0)
-                                        .background(Color(UIColor.systemGray6))
-                                        .cornerRadius(10)
-                                        
+                    LazyVStack(spacing: 20) {
+                        ForEach(Array(recipeViewModel.recipe.steps.enumerated()), id: \.offset) { index, step in
+                            HStack {
+                                TextEditor(text: $recipeViewModel.recipe.steps[index])
+                                    .frame(minHeight: 100, idealHeight: getTextHeight(text: step, width: UIScreen.main.bounds.width - 70), maxHeight: .infinity)
+                                    .padding(4)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.gray, lineWidth: 1)
+                                    )
+                                
+                                Button(action: {
+                                    deleteStep(at: .init(integer: index))
+                                }) {
+                                    Image(systemName: "minus.circle.fill")
+                                        .foregroundColor(.red)
                                 }
-                                .onDelete(perform: deleteStep)
+                                .padding(.leading, 5)
                             }
-                            .frame(height: max(CGFloat(80 * recipeViewModel.recipe.steps.count), 200))
-                        .scrollContentBackground(.hidden)
+                            .padding(.horizontal)
                         }
+                        .onDelete(perform: deleteStep)
 
                         Button(action: addStep) {
                             Label("Adicionar Etapa", systemImage: "plus.circle")
                         }
-                        VStack(alignment: .leading) {
-                            Button(action: {
-                                recipeFlow.navigateToAddRecipeView3()
-                            }) {
-                                HStack {
-                                    Spacer()
-                                    Text("Proximo")
-                                        .padding()
-                                        .background(Color(UIColor.systemGray6))
-                                        .cornerRadius(10)
-                                }
-                            }
-                        }
-
-                        Spacer()
-                        
-                    }.padding()
+                        .padding(.top, 10)
+                    }
+                    .padding(.bottom, 50)
                 }
             }
-        
-    }
-    
-
-}
-
-extension AddRecipeView2 {
-    private func customPicker(selection: Binding<String>, options: [String]) -> some View {
-        return VStack {
-            Picker("", selection: selection) {
-                ForEach(options, id: \.self) { option in
-                    Text(option)
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        recipeFlow.navigateToAddRecipeView3()
+                    }) {
+                        Text("Próximo")
+                            .padding()
+                            .background(Color(UIColor.systemGray6))
+                            .cornerRadius(10)
+                    }
+                    .padding(20)
                 }
             }
-            .pickerStyle(MenuPickerStyle())
         }
     }
-    
-    private func getHeightForText(_ text: String) -> CGFloat {
-        let textWidth = UIScreen.main.bounds.size.width - 32
-        let boundingRect = CGSize(width: textWidth, height: .infinity)
-        let size = text.boundingRect(with: boundingRect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [.font: UIFont.systemFont(ofSize: 17)], context: nil)
-        return max(size.height, 20) // Defina um mínimo de altura
+
+    private func getTextHeight(text: String, width: CGFloat) -> CGFloat {
+        let textView = UITextView(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        textView.text = text
+        textView.sizeToFit()
+        return textView.frame.height
     }
-    
+
     private func addStep() {
         recipeViewModel.recipe.steps.append("")
     }
@@ -85,7 +77,7 @@ extension AddRecipeView2 {
     }
 }
 
-struct AddReceitaView2_Previews: PreviewProvider {
+struct AddRecipeView2_Previews: PreviewProvider {
     static var previews: some View {
         AddRecipeView2()
             .environmentObject(RecipeViewModel())

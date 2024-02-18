@@ -24,7 +24,7 @@ struct CategoryView: View {
                         ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                             if (recipe.category == category || recipe.meal == category){
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
-                                    HorizontalRecipeView(recipe: recipe, disabled: true)
+                                    HorizontalRecipeView(viewModel: HorizontalRecipeViewModel(recipe: recipe, disabled: true) )
                                 }
                             }
                         }

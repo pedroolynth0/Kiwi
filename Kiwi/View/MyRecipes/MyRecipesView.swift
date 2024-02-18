@@ -25,7 +25,7 @@ struct MyRecipesView: View {
                     VStack (alignment: .leading){
                         ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                                 NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
-                                    HorizontalRecipeView(recipe: recipe)
+                                    HorizontalRecipeView(viewModel: HorizontalRecipeViewModel(recipe: recipe, disabled: false))
                                 }
                         }
                     }
