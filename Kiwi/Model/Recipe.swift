@@ -11,8 +11,9 @@ struct Recipe: Codable {
     var difficulty: String
     var time: String
     var meal: String
+    var favorite: Bool
     
-    init(_id: String, name: String, category: String, description: String, image: String, steps: [String], ingredients: [String], difficulty: String, time: String, meal: String) {
+    init(_id: String, name: String, category: String, description: String, image: String, steps: [String], ingredients: [String], difficulty: String, time: String, meal: String, favorite: Bool = false) {
         self._id = _id
         self.name = name
         self.category = category
@@ -23,6 +24,7 @@ struct Recipe: Codable {
         self.difficulty = difficulty
         self.time = time
         self.meal = meal
+        self.favorite = favorite
     }
     
     var uniqueID: String {

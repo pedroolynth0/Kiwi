@@ -23,7 +23,7 @@ struct CategoryView: View {
                     VStack (alignment: .leading){
                         ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                             if (recipe.category == category || recipe.meal == category){
-                                NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
+                                NavigationLink(destination: RecipeDetailsView(viewModel: RecipeDetailsViewModel(recipe: recipe))) {
                                     HorizontalRecipeView(viewModel: HorizontalRecipeViewModel(recipe: recipe, disabled: true) )
                                 }
                             }

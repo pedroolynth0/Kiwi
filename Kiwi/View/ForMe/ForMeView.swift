@@ -83,7 +83,7 @@ extension ForMeView {
                 HStack {
                     ForEach(viewModel.recipeData, id: \.uniqueID){ recipe in
                         if (recipe.category == label){
-                            NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
+                            NavigationLink(destination: RecipeDetailsView(viewModel: RecipeDetailsViewModel(recipe: recipe))) {
                                 CardRecipeView(recipe: recipe)
                             }
                         }

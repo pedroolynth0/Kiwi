@@ -23,7 +23,7 @@ class RecipeViewFactory {
             return AnyView(AddRecipeView4())
         case .recipeDetailsView:
             if let recipe = recipe {
-                return AnyView(RecipeDetailsView(recipe: recipe))
+                return AnyView(RecipeDetailsView(viewModel: RecipeDetailsViewModel(recipe: recipe)))
             } else {
                 return AnyView(EmptyView())
             }

@@ -11,7 +11,6 @@ import SwiftUI
 class HorizontalRecipeViewModel: ObservableObject {
     var recipe: Recipe
     var disabled: Bool
-    @Published var showAlert = false
     @Published var alertQueue = AlertQueue()
     
     init(recipe: Recipe, disabled: Bool) {

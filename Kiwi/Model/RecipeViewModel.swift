@@ -74,6 +74,7 @@ class RecipeViewModel: ObservableObject {
     func addRecipe() {
         do {
             try RecipeManager.saveRecipe(recipe)
+            
         } catch RecipeError.saveFailure(_ ) {
             print("Erro ao salvar a receita")
         } catch {
